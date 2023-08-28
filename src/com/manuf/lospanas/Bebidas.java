@@ -3,7 +3,7 @@ package com.manuf.lospanas;
 public class Bebidas extends Producto implements comestibles, descuentos {
     boolean alcoholica;
     float graduacionAlc;
-    boolean importado;
+    public boolean importado;
 
     public Bebidas(String identificador, String descripcion, int cantidadEnStock, float precio, float costo,
                      boolean disponibleParaVenta,boolean alcoholica, boolean importado){
@@ -21,7 +21,7 @@ public class Bebidas extends Producto implements comestibles, descuentos {
 
     }
 
-    public float GetDescuento(float precio, float costo){ //al momento de intentar aplicar esto no supe como hacer para que el programa detecte cual de los 3 tipos de "Producto" es, y que pueda acceder a la función correspondiente asi que apliqué los descuentos con un método alternativo
+    public float GetDescuento(float precio, float costo){ //al momento de intentar aplicar esto no supe como hacer para que el programa detecte cual de los 3 tipos de "Producto" es, y que pueda acceder a la función correspondiente asi que apliqué los descuentos con un método alternativo pero lo dejo hecho para que se vea
         float maxDescuento=0.85f;
         for(float i = maxDescuento; i < 1f; i+=0.01f){
             if((precio*i)>costo){

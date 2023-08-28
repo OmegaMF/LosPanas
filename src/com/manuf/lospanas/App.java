@@ -1,7 +1,4 @@
 package com.manuf.lospanas;
-//import java.util.ArrayList;
-import java.util.List;
-//import java.io.Console;
 import java.util.Scanner;
 
 import com.manuf.lospanas.Envasados.Material;
@@ -21,7 +18,6 @@ public class App {
         System.out.println("Bienvenido a la tienda Los Panas!");
 
         MenuPrincipal(tienda, sc, intUnidades, codigoachequear, stockTotal);
-        //AgregarProductos(tienda, sc, intUnidades, codigoachequear, stockTotal);
         
 
         sc.close();
@@ -106,7 +102,6 @@ public class App {
     }
 
     static void VenderProductos(Tienda tienda, Scanner sc, int intUnidades, String codigoachequear, int stockTotal){
-        //List<Producto> ticket = new ArrayList<>();
         System.out.println("Ingrese el código del producto que se vende");
         stockTotal=0;
         for (Producto producto : tienda.productos) {
@@ -178,9 +173,6 @@ public class App {
         }
     }
 
-    static void ImprimirTicket(List<Producto> lista, int intUnidades){
-        System.out.println();
-    }
 
     static void VolverAlMenu(Tienda tienda, Scanner sc, int intUnidades, String codigoachequear, int stockTotal){
                 System.out.println(" ");
@@ -191,7 +183,8 @@ public class App {
 }
 
 
-//Validación de identificador
+//Validación de identificador, esto lo hice al principio pero lo saqué porque decidí que tenía mas sentido dejar los artículos cargados por defecto. Pero si se quisiera agregar nuevos artículos en runtime, hice esta validación para el identificador alfanumérico
+
 /*System.out.println("Por favor seleccione una acción: ");
         System.out.println("1-Agregar nueva bebida.");
         System.out.println("2-Agregar nuevo envasado.");
@@ -205,7 +198,7 @@ public class App {
                     sc.close();
                     switch(tipoSeleccionado){
                         case 1: if(codigoachequear.matches("AC\\d{3}")){
-                            System.out.println("Código válido");}else{
+                            System.out.println("Código válido");}else{             en vez de decir "Código válido", pasaría a pedir el resto de inputs y usaría el "tienda.productos.Add()" que se encuentra en la función CargarDefaults();
                                 System.out.println("Código Invalido");
                             }
                             break;

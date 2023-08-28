@@ -7,7 +7,7 @@ public class Tienda {
     String nombre;
     int maxProductosEnStock;
     float saldoEnCaja;
-    //Dictionary<String,Producto> productosHabilitados; //define si están o no habilitados para la venta / el string es el identificador
+    //Dictionary<String,Producto> productosHabilitados; //define si están o no habilitados para la venta / el string es el identificador. No lo utilizo porque lo hice de una manera que usando la lista de elementos totales, mira cuales están habilitados y cuales no, y solo muestra los que sí los están
     List<Producto> productos=new ArrayList<>();
 
     public Tienda(String nombre, int maxProductosEnStock, float saldoEnCaja){
